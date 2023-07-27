@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ir60jjli42of"]
+
+[ext_resource type="Texture2D" uid="uid://csdwp1oaisdmp" path="res://assets/rat.png" id="1_dx3bu"]
+[ext_resource type="Script" path="res://src/mob.gd" id="1_ymbud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbo0m"]
+size = Vector2(36, 36)
+
+[node name="Mob" type="Area2D" groups=["mob"]]
+script = ExtResource("1_ymbud")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_dx3bu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xbo0m")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

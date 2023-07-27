@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2gqd0bylcrty"]
+
+[ext_resource type="Script" path="res://src/proj.gd" id="1_eguan"]
+[ext_resource type="Texture2D" uid="uid://cr2cmwcw726ew" path="res://assets/proj.png" id="1_hqibk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bunuw"]
+size = Vector2(28, 20)
+
+[node name="Proj" type="Area2D" groups=["proj"]]
+script = ExtResource("1_eguan")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_hqibk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bunuw")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
